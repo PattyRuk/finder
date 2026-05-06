@@ -59,7 +59,7 @@ header nav ul li:hover {
 /* Main Layout Grid */
 main {
     display: grid;
-    grid-template-columns: 1fr 600px 1fr; /* Center-focused feed */
+    grid-template-columns: 1fr 2fr 1fr; /* Center-focused feed */
     gap: 20px;
     max-width: 1200px;
     margin: 20px auto;
@@ -110,18 +110,9 @@ main {
 #post-button:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* Hidden Input */
-#post-image { display: none; }
-
-/* Main Layout Grid */
-main {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Center-focused feed */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 15px;
+#post-image::file-selector-button {
+    display: none;
 }
-
 
 
 
