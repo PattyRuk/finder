@@ -56,4 +56,74 @@ header nav ul li:hover {
     color: var(--primary-color); 
 }
 
+/* Main Layout Grid */
+main {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr; /* Center-focused feed */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Post Form Section */
+.post-form-section {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+#post-text {
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 1.2rem;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-form-section label {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    width: fit-content;
+}
+
+#post-button {
+    align-self: flex-end;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 9999px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+#post-button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Hidden Input */
+#post-image { display: none; }
+
+/* Main Layout Grid */
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Center-focused feed */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+
+
+
+
 
