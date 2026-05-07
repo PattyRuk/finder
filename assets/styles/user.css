@@ -8,6 +8,7 @@
     --text-main: #0f1419;
     --text-muted: #536471;
     --border-color: #eff3f4;
+    --btn-hover: rgb(26, 71, 234);
 }
 
 body {
@@ -30,6 +31,7 @@ header {
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
+    margin-bottom: 10px;
 }
 
 header h2 { 
@@ -46,20 +48,20 @@ header nav ul {
     font-weight: 500;
 }
 
-header nav ul li { 
+header nav ul li, .header-icon { 
     cursor: pointer; 
     transition: 
     color 0.2s; 
 }
 
-header nav ul li:hover { 
+header nav ul li:hover, .header-icon:hover { 
     color: var(--primary-color); 
 }
 
 /* Main Layout Grid */
 main {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Center-focused feed */
+    grid-template-columns: 1.2fr 2fr 1.2fr; /* Center-focused feed */
     gap: 20px;
     max-width: 1200px;
     margin: 20px auto;
@@ -72,49 +74,52 @@ main {
     border-radius: 16px;
     padding: 20px;
     border: 1px solid var(--border-color);
+    min-width: 440px;
 }
 
 #post-text {
     width: 100%;
-    border: none;
+    height: auto;
     resize: none;
     font-size: 1.2rem;
-    outline: none;
     margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    padding: 10px;
 }
 
-#post-form {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .post-form-section label {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--primary-color);
     cursor: pointer;
-    width: fit-content;
 }
 
 #post-button {
-    align-self: flex-end;
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 8px 24px;
-    border-radius: 9999px;
+    padding: 5px 20px;
+    border-radius: 50px;
     font-weight: bold;
     cursor: pointer;
     transition: opacity 0.2s;
+    margin-left: 80px auto;
 }
 
-#post-button:disabled { opacity: 0.5; cursor: not-allowed; }
+#post-button:disabled { 
+    opacity: 0.5; 
+    cursor: not-allowed; 
+}
+
+#post-button:hover {
+    background-color: var(--btn-hover);
+}
 
 /* Hidden Input */
 #post-image::file-selector-button {
     display: none;
 }
-
-
-
 
 
