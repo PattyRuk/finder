@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const hasImage = postImage.value.length > 0;
         postBtn.disabled = (hasText || hasImage) ? false : true;
     });
-    // 2. Post Form
+    // 2. Post Form --- this was used from my prior assignment (FakeBook)
     const createPostElement = (text, imgSrc) => {
         const post = document.createElement('div');
         post.className = 'post';
@@ -118,12 +118,61 @@ document.addEventListener('DOMContentLoaded', () => {
     });
    
    
+    //WHO TO FOLLOW SECTION
+   
+    async function populateConnections(count = 10) {
+        const connectionsBox = document.querySelector('.connections');
+        const URL = 'https://www.randomuser.me/api/?nat=CA&results=10&seed=same___.YzJ1Om1hbml0b2JhaW5zdGl0dXRlb2Z0cmFkZXNhbmR0ZWNobm9sb2d5OmM6bzo1YWM2MzcwMDQ5NGYyNDJjYWEyOTZiNWY2YmE1MGRiNzo3OjM5ZWM6NzBhOTU3MDkyNzcwNmE4NmE1NWNmMGY0MDVkZDE2MzQyNTM5M2JkODQ2YWE1ZWYxMDEzODY3M2E4ZjkyNjk2Yzp0OlQ6Tg';
+
+        const options = {                         //got this from the class lecture notes 
+            method: 'GET', 
+            headers: {
+                'Content-Type': 'application/JSON; charset=UTF-8'   
+            },
+            mode: 'cors'
+        }
+        try {
+            // Fetching User Data
+            const response = await fetch(URL, options);
+            const data = await response.json();
+            const users = data.results;
+   
+            // Container to Hold Connections
+            const listContainer = document.createElement('div');
+            listContainer.className = 'connections-list';
+   
+            // Structure Connections List
+            users.forEach(user => {
+                const userItem = document.createElement('div');
+                userItem.className = 'connection-item';
+   
+                userItem.innerHTML = `
+                    <img src="${user.picture.thumbnail}" alt="${user.name.first}">
+                    <div class="connection-info">
+                        <div class="user-name">${user.name.first} ${user.name.last}</div>
+                        <div>${user.location.city}</div>
+                        <div>@${user.login.username}</div>
+                    </div>
+                    <button class="follow-btn">Follow</button>
+                `;
+   
+                listContainer.appendChild(userItem);
+            });
+   
+            connectionsBox.appendChild(listContainer);
+   
+        } catch (error) {
+            console.error('Error fetching suggested users:', error);
+            connectionsBox.innerHTML = '<p class="failed">Failed to load suggestions.</p>';
+        }
+    }
 
 
     //Initializing
     window.addEventListener('load', () => {
         accountInfo.innerHTML = currentUser.getInfo();
         accountModal.style.display = 'block';
+        populateConnections(10);
     });
 
 
