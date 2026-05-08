@@ -283,11 +283,6 @@ footer {
     gap: 30px;
 }
 
-.footer-section h3 {
-    color: var(--primary-color);
-    margin-bottom: 10px;
-}
-
 .footer-section p {
     color: var(--text-muted);
     font-size: 0.9rem;
