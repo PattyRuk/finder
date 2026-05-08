@@ -34,11 +34,11 @@ header {
     margin-bottom: 10px;
 }
 
-header h2 { 
-    color: var(--primary-color); 
-    display: flex; 
-    align-items: center; 
-    gap: 8px; 
+header h2 {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 header nav ul {
@@ -48,22 +48,25 @@ header nav ul {
     font-weight: 500;
 }
 
-header nav ul li, .header-icon { 
-    cursor: pointer; 
-    transition: 
-    color 0.2s; 
+header nav ul li,
+.header-icon {
+    cursor: pointer;
+    transition:
+        color 0.2s;
 }
 
-header nav ul li:hover, .header-icon:hover { 
-    color: var(--primary-color); 
+header nav ul li:hover,
+.header-icon:hover {
+    color: var(--primary-color);
 }
 
 /* Main Layout Grid */
 main {
     display: grid;
-    grid-template-columns: 1.2fr 2fr 1.2fr; /* Center-focused feed */
+    grid-template-columns: 1.5fr 2fr 1fr;
+    /* Center-focused feed */
     gap: 20px;
-    max-width: 1200px;
+    max-width: 96%;
     margin: 20px auto;
     padding: 0 15px;
 }
@@ -96,7 +99,8 @@ main {
     cursor: pointer;
 }
 
-#post-button, button{
+#post-button,
+button {
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -110,14 +114,16 @@ main {
 
 button {
     margin-top: 8px;
+    padding: 5px 20px;
 }
 
-#post-button:disabled { 
-    opacity: 0.5; 
-    cursor: not-allowed; 
+#post-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
-#post-button:hover, button:hover {
+#post-button:hover,
+button:hover {
     background-color: var(--btn-hover);
 }
 
@@ -137,14 +143,17 @@ button {
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
 .post-header {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
+
 .user-name {
     font-weight: bold;
 }
+
 .profile-pic img {
     width: 55px;
     height: 55px;
@@ -152,15 +161,58 @@ button {
     margin-right: 10px;
     /* background-image: url(/assets/media/profilepic.jpg); */
 }
+
 .post-date {
     color: var(--text-color-faded);
     font-size: 6px;
     margin-left: auto;
 }
+
 .post-image-display {
     margin-top: 8px;
-    max-width: 100%;  
+    max-width: 100%;
     border-radius: 5px;
 }
 
+
+/* Profile Sidebar */
+#account-pop-up {
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+#account-pop-up .pop-up-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#account-pop-up img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    margin-bottom: 12px;
+    object-fit: cover;
+}
+
+#account-pop-up h3,
+.connections h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.6rem;
+}
+
+#account-pop-up p {
+    font-size: 1.3rem;
+}
+
+#account-pop-up p bold {
+    font-size: 1.5;
+}
 
