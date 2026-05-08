@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@import './reset.css';
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fb;
+    min-height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1e293b;
+}
+
+.container {
+    width: 70%;
+    height: 600px;
+    background: #fff;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.left {
+    width: 45%;
+    background:
+        linear-gradient(rgba(0, 76, 255, 0.75),
+        rgba(0, 45, 160, 0.8)),
+        url("../media/background\ image.png");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+}
+
+.left-content {
+    text-align: center;
+    color: white;
+}
+
+
+.icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.left-content h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.left-content p {
+    font-size: 20px;
+    color: rgba(255,255,255,0.95);
+}
