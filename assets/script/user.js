@@ -66,6 +66,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const accountModal = document.getElementById('account-pop-up');
     const accountInfo = document.getElementById('pop-up-info');
 
+    // 1. Enable button
+    postText.addEventListener('input', () => {
+        const hasText = postText.value.trim().length > 0;
+        const hasImage = postImage.value.length > 0;
+        postBtn.disabled = (hasText || hasImage) ? false : true;
+    });
+    // 2. Post Form
+    const createPostElement = (text, imgSrc) => {
+        const post = document.createElement('div');
+        post.className = 'post';
 
+        // Profile Header & Time
+        const now = new Date();
+        const timeString = `${now.toLocaleDateString()}  ${now.toLocaleTimeString()}`
+        post.innerHTML =
+            `<div class="post-header">
+                <div class="profile-pic"><img src="./assets/media/profilepic2.jpg"></div>
+                <div class="post-info">
+                    <h3>Jane Doe</h3>
+                    <span>${timeString}</span>
+                </div>
+            </div>
+            <p>${text}</p>`;
+        if (imgSrc) {
+            const img = document.createElement('img');
+            img.src = imgSrc;
+            img.className = 'post-image-display';
+            post.appendChild(img);
+        }
+        return post;
+    };
+
+    postForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        // add image
+        const file = postImage.files[0];
+        let imageUrl = null;
+        if (file) {
+            imageUrl = URL.createObjectURL(file);
+        }
+       
+        // combine and post
+        const newPost = createPostElement(postText.value, imageUrl);
+        postsContainer.prepend(newPost);
+
+        //reset form
+        postForm.reset();
+        postBtn.disabled = true;
+   
+    });
+   
+   
+   
 
 });
