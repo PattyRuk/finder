@@ -54,6 +54,9 @@ header nav ul li,
     transition:
         color 0.2s;
 }
+.header-icon {
+    font-size: x-large;
+}
 
 header nav ul li:hover,
 .header-icon:hover {
@@ -63,8 +66,7 @@ header nav ul li:hover,
 /* Main Layout Grid */
 main {
     display: grid;
-    grid-template-columns: 1.5fr 2fr 1fr;
-    /* Center-focused feed */
+    grid-template-columns: 1.3fr 2fr 1fr; /* Center-focused feed */
     gap: 20px;
     max-width: 96%;
     margin: 20px auto;
@@ -102,9 +104,9 @@ main {
 #post-button,
 button {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--card-bg);
     border: none;
-    padding: 3px 20px;
+    padding: 3px 18px;
     border-radius: 50px;
     font-weight: bold;
     cursor: pointer;
@@ -114,7 +116,7 @@ button {
 
 button {
     margin-top: 8px;
-    padding: 5px 20px;
+    padding: 4px 18px;
 }
 
 #post-button:disabled {
@@ -252,7 +254,7 @@ button:hover {
 
 .follow-btn {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--card-bg);
     border: none;
     padding: 5px 16px;
     border-radius: 9999px;
