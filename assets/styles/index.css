@@ -149,3 +149,28 @@ body {
     background: #0052cc;
     color: white;
 }
+
+.footer-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #59687d;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    color: #0052cc;
+}
+
+.finder-footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #94a3b8;
+    font-size: 14px;
+}
