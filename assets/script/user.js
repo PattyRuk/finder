@@ -6,17 +6,20 @@ class User {
     #name;
     #userName;
     #email;
-    constructor(id, name, userName, email) {
+    #password
+    constructor(id, name, userName, email, password) {
         this.#id = id;
         this.#name = name;
         this.#userName = userName;
         this.#email = email;
+        this.#password = password;
     }
 
     getId() { return this.#id; }
     getName() { return this.#name; }
     getUserName() { return this.#userName; }
     getEmail() { return this.#email; }
+    getPassword() {return this.#password}
     getInfo() {
         return `
         <p><strong> ${this.#name} </strong></p>
@@ -55,6 +58,7 @@ const currentUser = new Subscriber(
     'Jane.Doe@email.com',
     ['Software Engineer'],
     ['The Program Project'],
+    'password123',
 );
 // DOM Elements
 document.addEventListener('DOMContentLoaded', () => {
@@ -151,7 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="connection-info">
                         <div class="user-name">${user.name.first} ${user.name.last}</div>
                         <div>${user.location.city}</div>
-                        <div>@${user.login.username}</div>
                     </div>
                     <button class="follow-btn">Follow</button>
                 `;
