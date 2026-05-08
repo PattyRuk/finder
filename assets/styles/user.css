@@ -66,11 +66,11 @@ header nav ul li:hover,
 /* Main Layout Grid */
 main {
     display: grid;
-    grid-template-columns: 1.2fr 2fr 1.2fr; /* Center-focused feed */
-    gap: 20px;
+    grid-template-columns: 1.2fr 2fr 1.2fr;
+    gap: 18px;
     max-width: 96%;
-    margin: 20px auto;
-    padding: 0 15px;
+    margin: 15px auto;
+    padding: 0 10px;
 }
 
 /* Post Form Section */
@@ -256,10 +256,10 @@ button:hover {
     background-color: var(--primary-color);
     color: var(--card-bg);
     border: none;
-    padding: 4px 15px;
+    padding: 4px 14px;
     border-radius: 50px;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 1rem;
     cursor: pointer;
 }
 
