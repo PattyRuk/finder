@@ -13,7 +13,83 @@
 
 </head>
 <body>
+    <header>
+        <h2><i class="fa-brands fa-fantasy-flight-games"></i>JobFinder</h2>
+        <nav>
+            <ul>
+                <li>Friends</li>
+                <li>Jobs</li>
+                <li>Subscribe</li>
+                <li>Settings</li>
+            </ul>
+        </nav>
+        <div class="header-icon" id="account-info-btn"><i class="fa-regular fa-circle-user"></i></div>
+    </header>
+    <main>
+        <!-- Profile Section -->
+        <aside id="account-pop-up" class="pop-up">
+            <div class="pop-up-content">
+                <h3><strong>Account Information</strong></h3>
+                <img src="./assets/media/profilepic2.jpg">
+                <div id="pop-up-info">
+                    <!-- User Info Displayed -->
+                </div>
+                <button><i class="fa-solid fa-user-plus"></i> Follow</button>
+                <button><i class="fa-solid fa-message"></i> Message</button>
+            </div>
+        </aside>
+        
+        <!-- Post Section -->
+        <div>
+            <section class="post-form-section">
+                <form id="post-form">
+                    <textarea id="post-text" placeholder="What's on your mind?" rows="5"></textarea>
+                    <label for="post-image"><i class="fa-solid fa-images"></i></label>
+                    <span><input type="file" id="post-image" accept="image/*"></span>
+                    <button type="submit" id="post-button" disabled>Post</button>
+                </form>
+            </section>
 
+            <section class="posts-display" id="posts-container">
+                <!-- Posts Displayed Here -->
+            <div id="post1" class="post">
+                <div class="post-header">
+                    <div class="profile-pic"><img src="./assets/media/visitjapan.jpg"></div>
+                    <div class="post-info">
+                        <h3>Visit Japan Daily</h3>
+                        <span>5/8/2026 4:09:48 PM</span>
+                    </div>
+                </div>
+                <p>"Visiting Tokyo and Kyoto during sakura season is absolutely breathtaking. 
+                    Walking along the Meguro River with the cherry blossoms in full bloom feels like stepping into a dream.
+                    The city feels incredibly vibrant, and the sakura-flavored treats are a lovely bonus. 
+                    A truly unforgettable trip that We highly recommend!"</p>
+                <img src="./assets/media/sakura.jpg" class="post-image-display">
+            </div>
+            
+            <div id="post2" class="post">
+                <div class="post-header">
+                    <div class="profile-pic"><img src="./assets/media/science-student.jpg"></div>
+                    <div class="post-info">
+                        <h3>Dr. Annika Lee</h3>
+                        <span>5/7/2026 1:03:38 PM</span>
+                    </div>
+                </div>
+                <p> <strong>Amazing News</strong> <br>
+                    <strong>A newly discovered tertiary organic chemical reaction;</strong>
+                    This will further advance the biosynthesis and stabilazation of the chemical reactions during bond formation. 
+                    Essentially this will bring forth a faster rate of medicinal creation. </p>
+                <img src="./assets/media/tert.PNG" class="post-image-display">
+            </div>
+
+            </section>
+        </div>
+        <!-- Recommended Connections -->
+        <aside class="connections">
+            <h3><strong>Who to Follow</strong></h3>
+
+        </aside>
+    </main>
 </body>
 </html>
 
