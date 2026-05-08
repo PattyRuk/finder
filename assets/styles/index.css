@@ -108,3 +108,44 @@ body {
     font-size: 16px;
     color: #1e293b;
 }
+
+.forgot {
+    text-align: left;
+    color: #0052cc;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.login-btn,
+.signup-btn {
+    width: 100%;
+    height: 52px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.login-btn {
+    background: #0052cc;
+    border: none;
+    color: white;
+}
+
+.login-btn:hover {
+    background: #003fa3;
+}
+
+.signup-btn {
+    background: transparent;
+    border: 2px solid #0052cc;
+    color: #0052cc;
+}
+
+.signup-btn:hover {
+    background: #0052cc;
+    color: white;
+}
