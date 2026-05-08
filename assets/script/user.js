@@ -120,4 +120,11 @@ document.addEventListener('DOMContentLoaded', () => {
    
 
 
+    //Initializing
+    window.addEventListener('load', () => {
+        accountInfo.innerHTML = currentUser.getInfo();
+        accountModal.style.display = 'block';
+    });
+
+
 });
