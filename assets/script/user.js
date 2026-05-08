@@ -56,3 +56,16 @@ const currentUser = new Subscriber(
     ['Software Engineer'],
     ['The Program Project'],
 );
+// DOM Elements
+document.addEventListener('DOMContentLoaded', () => {
+    const postBtn = document.getElementById('post-button');
+    const postText = document.getElementById('post-text');
+    const postImage = document.getElementById('post-image');
+    const postForm = document.getElementById('post-form');
+    const postsContainer = document.getElementById('posts-container');
+    const accountModal = document.getElementById('account-pop-up');
+    const accountInfo = document.getElementById('pop-up-info');
+
+
+
+});
