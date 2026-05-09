@@ -69,6 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const postsContainer = document.getElementById('posts-container');
     const accountModal = document.getElementById('account-pop-up');
     const accountInfo = document.getElementById('pop-up-info');
+   
+    const accountBtn = document.getElementById('account-info-btn');
+    const logoutMenu = document.getElementById('logout-menu');
+    const logoutBtn = document.getElementById('logout-btn');
 
     // 1. Enable button
     postText.addEventListener('input', () => {
@@ -126,12 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
    
     async function populateConnections(count = 10) {
         const connectionsBox = document.querySelector('.connections');
-        const URL = 'https://www.randomuser.me/api/?nat=CA&results=10&seed=same___.YzJ1Om1hbml0b2JhaW5zdGl0dXRlb2Z0cmFkZXNhbmR0ZWNobm9sb2d5OmM6bzo1YWM2MzcwMDQ5NGYyNDJjYWEyOTZiNWY2YmE1MGRiNzo3OjM5ZWM6NzBhOTU3MDkyNzcwNmE4NmE1NWNmMGY0MDVkZDE2MzQyNTM5M2JkODQ2YWE1ZWYxMDEzODY3M2E4ZjkyNjk2Yzp0OlQ6Tg';
+        const URL = 'https://www.randomuser.me/api/?nat=CA&results=10&seed=same___.YzJ1Om1hbml0b2JhaW5zdGl0dXRlb2Z0cmFkZXNhbmR0ZWNobm9sb2d5OmM6bzo1YWM2MzcwMDQ5NGYyNDJjYWEyOTZiNWY2YmE1MGRiNzo3OjM5ZWM6NzBhOTU3MDkyNzcwNmE4NmE1NWNmMGY0MDVkZDE2MzQyNTM5M2JkODQ2YWE1ZWYxMDEzODY3M2E4ZjkyNjk2Yzp0OlQ6Tg___.YzJ1Om1hbml0b2JhaW5zdGl0dXRlb2Z0cmFkZXNhbmR0ZWNobm9sb2d5OmM6bzozM2RhYWJmOGFiNjJmOWU1YmI5NjY0ZmUxZGVhOGEzODo3OmIwY2U6ZGViNjE3YTdlZTJiZWM3ZWE1ZjFiMTQ5M2FiYTM5YjllZTEwMmE1ZjEwNTBjMzg1MzlkNGIyYTY4ZjU4ODgyODp0OlQ6Tg';
 
-        const options = {                         //got this from the class lecture notes 
-            method: 'GET', 
+        const options = {                         //got this from the class lecture notes
+            method: 'GET',
             headers: {
-                'Content-Type': 'application/JSON; charset=UTF-8'   
+                'Content-Type': 'application/JSON; charset=UTF-8'  
             },
             mode: 'cors'
         }
@@ -171,12 +175,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    //Initializing
+    // Log out logic
+    accountBtn.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevents the click from immediately closing the menu
+        logoutMenu.classList.toggle('active');
+    });
+
+    document.addEventListener('click', () => {
+        logoutMenu.classList.remove('active');
+    });
+
+    logoutBtn.addEventListener('click', () => {
+
+        window.location.href = 'index.html';
+    });
+
+    // Initializing
     window.addEventListener('load', () => {
         accountInfo.innerHTML = currentUser.getInfo();
         accountModal.style.display = 'block';
         populateConnections(10);
     });
-
 
 });
