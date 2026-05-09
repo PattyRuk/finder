@@ -30,9 +30,9 @@ JobFinder is a professional social networking simulation designed to connect pro
 
 ## How it Works
 
-> 1. Open index.html in a modern web browser.
-  2. Log in using the default credentials: Jane.Doe@email.    com / password123.
-  3. Interact with the post form, by posting uploaded image files, or simple text.
+>  1. Open index.html in a modern web browser.
+>  2. Log in using the default credentials: Jane.Doe@email.    com / password123.
+>  3. Interact with the post form, by posting uploaded image files, or simple text.
 
 ## Login Details
 
@@ -45,8 +45,8 @@ JobFinder is a professional social networking simulation designed to connect pro
 - Password: password123
 
 ## LIVE DEMO
-CClick here for [Live Demo](https://pattyruk.github.io/finder/)
+Click here for [Live Demo](https://pattyruk.github.io/finder/)
 
 ## Developer
-Manvir
+Manvir  
 Patrick

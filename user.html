@@ -23,7 +23,17 @@
                 <li><i class="fa-solid fa-gear"></i> Settings</li>
             </ul>
         </nav>
-        <div class="header-icon" id="account-info-btn"><i class="fa-regular fa-circle-user"></i></div>
+        <div class="header-icon-container">
+          <div class="header-icon" id="account-info-btn"><i class="fa-regular fa-circle-user"></i></div>
+                  <!-- Logout Popup -->
+          <div id="logout-menu" class="logout-dropdown">
+              <p><strong>My Account</strong></p>
+              <hr>
+              <button id="logout-btn" class="logout-action-btn">
+                  <i class="fa-solid fa-right-from-bracket"></i> Log Out
+              </button>
+          </div>
+        </div>
     </header>
     <main>
         <!-- Profile Section -->
