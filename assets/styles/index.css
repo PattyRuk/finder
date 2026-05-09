@@ -150,18 +150,28 @@ body {
     color: white;
 }
 
+.footer-section {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
 .footer-links {
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px 24px;
     display: flex;
     flex-wrap: wrap;
-    gap: 14px;
     justify-content: center;
+    justify-content: flex-start;
 }
 
 .footer-links a {
     text-decoration: none;
     color: #59687d;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .footer-links a:hover {
@@ -169,10 +179,12 @@ body {
 }
 
 .finder-footer {
-    text-align: center;
-    margin-top: 10px;
+    text-align: right;
+    margin-top: 2px;
     color: #94a3b8;
-    font-size: 14px;
+    font-size: 15px;
+    white-space: nowrap;
+    align-self: start;
 }
 
 .error-msg {
@@ -180,5 +192,6 @@ body {
     font-size: 15px;
     font-weight: 500;
     text-align: left;
+    margin-bottom: 15px
     
 }
