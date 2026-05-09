@@ -8,6 +8,8 @@
     --text-main: #0f1419;
     --text-muted: #536471;
     --border-color: #eff3f4;
+    --color-red: #ff4d4d;
+    --color-red-2:#600e0e;
     --btn-hover: rgb(26, 71, 234);
 }
 
@@ -18,7 +20,7 @@ body {
     margin: 0;
 }
 
-/* Header - Modern & Sticky */
+/* Header */
 header {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
@@ -58,6 +60,10 @@ header nav ul li,
     font-size: x-large;
 }
 
+.header-icon-container {
+    position: relative;
+}
+
 header nav ul li:hover,
 .header-icon:hover {
     color: var(--primary-color);
@@ -71,6 +77,13 @@ main {
     max-width: 96%;
     margin: 15px auto;
     padding: 0 10px;
+}
+
+#post-form {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+    justify-content: space-between; 
 }
 
 /* Post Form Section */
@@ -101,6 +114,10 @@ main {
     cursor: pointer;
 }
 
+#post-button{
+    margin-left: auto;
+}
+
 #post-button,
 button {
     background-color: var(--primary-color);
@@ -111,7 +128,6 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: opacity 0.2s;
-    margin-left: 80px auto;
 }
 
 button {
@@ -264,8 +280,8 @@ button:hover {
 }
 
 .failed {
-    font-size: 1rem; 
-    color: red;
+    font-size: 1rem;
+    color: var(--color-red);
 }
 
 /* Footer Section */
@@ -327,6 +343,55 @@ footer {
     border-top: 1px solid var(--border-color);
 }
 
+/* Logout Dropdown Styling */
+.logout-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    width: 180px;
+    z-index: 2000;
+}
+
+
+.logout-dropdown.active {
+    display: block;
+}
+
+.logout-dropdown p {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.logout-dropdown hr {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 10px 0;
+}
+
+.logout-action-btn {
+    width: 100%;
+    background-color: var(--color-red);
+    color: var(--bg-color);
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.logout-action-btn:hover {
+    background-color: var(--color-red-2);
+}
 
 @media (max-width: 1000px) {
     main {
